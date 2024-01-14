@@ -1,0 +1,12 @@
+{
+  "name": "mixedreeftank",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/codysparks/mixedreeftank.git",
+  "author": "Cody Sparks <cosparks@live.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "docker-compose up -d",
+    "stop": "docker-compose down"
+  }
+}
