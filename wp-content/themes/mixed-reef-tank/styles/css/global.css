@@ -1,0 +1,79 @@
+/**** Colors ****/
+body {
+  background: #f9f7f3;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+body a {
+  color: #0fa3b1;
+  text-decoration: none;
+}
+body a:visited {
+  color: #0fa3b1;
+}
+body a:hover,
+body a:focus {
+  color: #f7a072;
+  text-decoration: underline;
+}
+body a:active {
+  color: #eddea4;
+}
+body a:focus {
+  outline: thin dotted;
+}
+body a:hover,
+body a:active {
+  outline: 0;
+}
+
+#masthead {
+  align-items: center;
+  background: #0fa3b1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 24px;
+}
+#masthead .site-branding img {
+  height: 50px;
+}
+#masthead .main-navigation ul {
+  display: flex;
+  gap: 16px;
+  justify-content: flex-end;
+}
+#masthead .main-navigation ul li a {
+  color: #fff;
+  font-size: 18px;
+}
+#masthead .main-navigation ul li a:hover {
+  color: #f7a072;
+}
+#masthead .main-navigation ul li a:active {
+  color: #eddea4;
+}
+#masthead .main-navigation ul li.menu-item-has-children > a {
+  align-items: center;
+  display: flex;
+}
+#masthead .main-navigation ul li.menu-item-has-children > a::after {
+  border-top: 6px dashed;
+  border-right: 6px solid transparent;
+  border-left: 6px solid transparent;
+  content: "";
+}
+#masthead .main-navigation ul li .sub-menu {
+  background: #f9f7f3;
+  padding: 16px;
+}
+#masthead .main-navigation ul li .sub-menu a {
+  color: inherit;
+}
+#masthead .main-navigation ul li .sub-menu a:hover {
+  color: #f7a072;
+}
+#masthead .main-navigation ul li .sub-menu a:active {
+  color: #eddea4;
+}
+
+/*# sourceMappingURL=global.css.map */

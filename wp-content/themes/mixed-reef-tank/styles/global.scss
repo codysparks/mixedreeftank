@@ -1,0 +1,103 @@
+@import './_variables.scss';
+
+body {
+	background: $background;
+	max-width: 1400px;
+	margin: 0 auto;
+
+	a {
+		color: $teal;
+		text-decoration: none;
+	}
+
+	a:visited {
+		color: $teal;
+	}
+
+	a:hover,
+	a:focus {
+		color: $orange;
+		text-decoration: underline;
+	}
+
+	a:active {
+		color: $yellow;
+	}
+
+	a:focus {
+		outline: thin dotted;
+	}
+
+	a:hover,
+	a:active {
+		outline: 0;
+	}
+}
+
+#masthead {
+	align-items: center;
+	background: $teal;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	padding: 24px;
+
+	.site-branding {
+		img {
+			height: 50px;
+		}
+	}
+
+	.main-navigation {
+		ul {
+			display: flex;
+			gap: 16px;
+			justify-content: flex-end;
+
+			li {
+				a {
+					color: #fff;
+					font-size: 18px;
+
+					&:hover {
+						color: $orange;
+					}
+
+					&:active {
+						color: $yellow;
+					}
+				}
+
+				&.menu-item-has-children {
+					> a {
+						align-items: center;
+						display: flex;
+
+						&::after {
+							border-top: 6px dashed;
+							border-right: 6px solid transparent;
+							border-left: 6px solid transparent;
+							content: '';
+						}
+					}
+				}
+
+				.sub-menu {
+					background: $background;
+					padding: 16px;
+
+					a {
+						color: inherit;
+
+						&:hover {
+							color: $orange;
+						}
+
+						&:active {
+							color: $yellow;
+						}
+					}
+				}
+			}
+		}
+	}
+}
