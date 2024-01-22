@@ -1,12 +1,13 @@
 {
-  "name": "mixedreeftank",
-  "version": "1.0.0",
-  "main": "index.js",
-  "repository": "https://github.com/codysparks/mixedreeftank.git",
-  "author": "Cody Sparks <cosparks@live.com>",
-  "license": "MIT",
-  "scripts": {
-    "start": "docker-compose up -d",
-    "stop": "docker-compose down"
-  }
+	"name": "mixedreeftank",
+	"version": "1.0.0",
+	"main": "index.js",
+	"repository": "https://github.com/codysparks/mixedreeftank.git",
+	"author": "Cody Sparks <cosparks@live.com>",
+	"license": "MIT",
+	"scripts": {
+		"start": "docker-compose up -d",
+		"stop": "docker-compose down",
+		"watch": "sass --watch wp-content/themes/mixed-reef-tank/styles/global.scss:wp-content/themes/mixed-reef-tank/styles/css/global.css wp-content/themes/mixed-reef-tank/styles/front-page.scss:wp-content/themes/mixed-reef-tank/styles/css/front-page.css"
+	}
 }
