@@ -1,0 +1,47 @@
+@mixin colorLink {
+	color: $blue;
+	text-decoration: none;
+	transition: color 0.15s ease-in-out;
+
+	&:visited {
+		color: $blue;
+	}
+
+	&:hover,
+	&:focus {
+		color: $gray;
+		text-decoration: underline;
+	}
+
+	&:active {
+		color: $orange;
+	}
+
+	&:focus {
+		outline: thin dotted;
+	}
+}
+
+@mixin grayLink {
+	color: $gray;
+	text-decoration: none;
+	transition: color 0.15s ease-in-out;
+
+	&:visited {
+		color: $gray;
+	}
+
+	&:hover,
+	&:focus {
+		color: $blue;
+		text-decoration: underline;
+	}
+
+	&:active {
+		color: $orange;
+	}
+
+	&:focus {
+		outline: thin dotted;
+	}
+}

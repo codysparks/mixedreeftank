@@ -1,49 +1,42 @@
 @import './_variables.scss';
+@import './mixins.scss';
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
 
 body {
 	background: $background;
-	max-width: 1400px;
+	font-family: 'Mulish', sans-serif;
+	font-size: 18px;
+	max-width: 1120px;
 	margin: 0 auto;
+	padding: 32px;
 
 	a {
-		color: $teal;
-		text-decoration: none;
-	}
-
-	a:visited {
-		color: $teal;
-	}
-
-	a:hover,
-	a:focus {
-		color: $orange;
-		text-decoration: underline;
-	}
-
-	a:active {
-		color: $yellow;
-	}
-
-	a:focus {
-		outline: thin dotted;
-	}
-
-	a:hover,
-	a:active {
-		outline: 0;
+		@include colorLink;
 	}
 }
 
 #masthead {
 	align-items: center;
-	background: $teal;
-	display: grid;
-	grid-template-columns: 1fr 1fr;
+	display: flex;
+	justify-content: space-between;
 	padding: 24px;
 
-	.site-branding {
-		img {
-			height: 50px;
+	.site-logo {
+		align-items: center;
+		display: grid;
+		gap: 16px;
+		grid-template-columns: 90px 1fr;
+		width: 100%;
+
+		a {
+			line-height: 0;
+		}
+
+		a.site-name {
+			@include grayLink;
+			font-size: 32px;
+			font-weight: 700;
+			line-height: 100%;
 		}
 	}
 
@@ -55,16 +48,8 @@ body {
 
 			li {
 				a {
-					color: #fff;
-					font-size: 18px;
-
-					&:hover {
-						color: $orange;
-					}
-
-					&:active {
-						color: $yellow;
-					}
+					@include grayLink;
+					font-size: 16px;
 				}
 
 				&.menu-item-has-children {
@@ -93,7 +78,7 @@ body {
 						}
 
 						&:active {
-							color: $yellow;
+							color: $orange;
 						}
 					}
 				}
