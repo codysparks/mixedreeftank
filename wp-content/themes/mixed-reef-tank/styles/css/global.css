@@ -4,14 +4,11 @@ body {
   background: #ffffff;
   font-family: "Mulish", sans-serif;
   font-size: 18px;
-  max-width: 1120px;
-  margin: 0 auto;
-  padding: 32px;
 }
 body a {
   color: #2b92ec;
   text-decoration: none;
-  transition: color 0.15s ease-in-out;
+  transition: color 0.25s ease-in-out;
 }
 body a:visited {
   color: #2b92ec;
@@ -26,90 +23,141 @@ body a:active {
 body a:focus {
   outline: thin dotted;
 }
+body h1,
+body h2,
+body h3,
+body h4,
+body h5 {
+  margin-bottom: 32px;
+}
+body h1 {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 130%;
+}
+body h2 {
+  font-size: 36px;
+  font-weight: 600;
+}
+body h3 {
+  font-size: 32px;
+  font-weight: 500;
+}
+body h4 {
+  font-size: 24px;
+  font-weight: 500;
+}
+body h5 {
+  font-size: 20px;
+  font-weight: 500;
+}
+body p {
+  line-height: 170%;
+}
+
+.content-wrapper {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+.site-main {
+  margin-top: 32px;
+}
 
 #masthead {
+  background-color: #fff;
+  box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.15);
+  padding: 32px 0;
+  position: sticky;
+  top: 0;
+  z-index: 5;
+}
+#masthead .content-wrapper {
   align-items: center;
   display: flex;
   justify-content: space-between;
-  padding: 24px;
 }
-#masthead .site-logo {
+#masthead .content-wrapper .site-logo {
   align-items: center;
-  display: grid;
+  display: flex;
   gap: 16px;
-  grid-template-columns: 90px 1fr;
   width: 100%;
 }
-#masthead .site-logo a {
+#masthead .content-wrapper .site-logo a {
   line-height: 0;
 }
-#masthead .site-logo a.site-name {
+#masthead .content-wrapper .site-logo a.site-name {
   color: #424851;
   text-decoration: none;
-  transition: color 0.15s ease-in-out;
+  transition: color 0.25s ease-in-out;
   font-size: 32px;
   font-weight: 700;
   line-height: 100%;
 }
-#masthead .site-logo a.site-name:visited {
+#masthead .content-wrapper .site-logo a.site-name:visited {
   color: #424851;
 }
-#masthead .site-logo a.site-name:hover, #masthead .site-logo a.site-name:focus {
+#masthead .content-wrapper .site-logo a.site-name:hover, #masthead .content-wrapper .site-logo a.site-name:focus {
   color: #2b92ec;
   text-decoration: underline;
 }
-#masthead .site-logo a.site-name:active {
+#masthead .content-wrapper .site-logo a.site-name:active {
   color: #f7a072;
 }
-#masthead .site-logo a.site-name:focus {
+#masthead .content-wrapper .site-logo a.site-name:focus {
   outline: thin dotted;
 }
-#masthead .main-navigation ul {
+#masthead .content-wrapper .main-navigation ul {
   display: flex;
   gap: 16px;
   justify-content: flex-end;
 }
-#masthead .main-navigation ul li a {
+#masthead .content-wrapper .main-navigation ul li a {
   color: #424851;
   text-decoration: none;
-  transition: color 0.15s ease-in-out;
+  transition: color 0.25s ease-in-out;
   font-size: 16px;
 }
-#masthead .main-navigation ul li a:visited {
+#masthead .content-wrapper .main-navigation ul li a:visited {
   color: #424851;
 }
-#masthead .main-navigation ul li a:hover, #masthead .main-navigation ul li a:focus {
+#masthead .content-wrapper .main-navigation ul li a:hover, #masthead .content-wrapper .main-navigation ul li a:focus {
   color: #2b92ec;
   text-decoration: underline;
 }
-#masthead .main-navigation ul li a:active {
+#masthead .content-wrapper .main-navigation ul li a:active {
   color: #f7a072;
 }
-#masthead .main-navigation ul li a:focus {
+#masthead .content-wrapper .main-navigation ul li a:focus {
   outline: thin dotted;
 }
-#masthead .main-navigation ul li.menu-item-has-children > a {
+#masthead .content-wrapper .main-navigation ul li.menu-item-has-children > a {
   align-items: center;
   display: flex;
 }
-#masthead .main-navigation ul li.menu-item-has-children > a::after {
+#masthead .content-wrapper .main-navigation ul li.menu-item-has-children > a::after {
   border-top: 6px dashed;
   border-right: 6px solid transparent;
   border-left: 6px solid transparent;
   content: "";
 }
-#masthead .main-navigation ul li .sub-menu {
+#masthead .content-wrapper .main-navigation ul li .sub-menu {
   background: #ffffff;
   padding: 16px;
 }
-#masthead .main-navigation ul li .sub-menu a {
+#masthead .content-wrapper .main-navigation ul li .sub-menu a {
   color: inherit;
 }
-#masthead .main-navigation ul li .sub-menu a:hover {
+#masthead .content-wrapper .main-navigation ul li .sub-menu a:hover {
   color: #f7a072;
 }
-#masthead .main-navigation ul li .sub-menu a:active {
+#masthead .content-wrapper .main-navigation ul li .sub-menu a:active {
   color: #f7a072;
+}
+
+.admin-bar #masthead {
+  top: 32px;
 }
 
 /*# sourceMappingURL=global.css.map */

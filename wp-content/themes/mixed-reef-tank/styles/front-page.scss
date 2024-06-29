@@ -1,1 +1,54 @@
+@import './_variables.scss';
+@import './mixins.scss';
 
+.home {
+	.featured {
+		align-items: center;
+		display: grid;
+		gap: 64px;
+		grid-template-columns: 1fr 1fr;
+		margin-bottom: 80px;
+
+		a {
+			@include blueButton;
+		}
+
+		.featured-img {
+			line-height: 0;
+			position: relative;
+			width: fit-content;
+
+			&::after {
+				background-color: #f2f3f3;
+				content: '';
+				display: block;
+				position: absolute;
+				top: 32px;
+				right: -32px;
+				height: 450px;
+				width: 450px;
+				z-index: -1;
+			}
+		}
+	}
+
+	.featured-posts {
+		h2 {
+			text-align: center;
+
+			&::after {
+				border-bottom: 5px $orange solid;
+				content: '';
+				display: flex;
+				height: 5px;
+				margin: 32px auto 0;
+				width: 50px;
+			}
+		}
+
+		.featured-posts-wrapper {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+		}
+	}
+}

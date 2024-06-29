@@ -6,83 +6,141 @@ body {
 	background: $background;
 	font-family: 'Mulish', sans-serif;
 	font-size: 18px;
-	max-width: 1120px;
-	margin: 0 auto;
-	padding: 32px;
 
 	a {
-		@include colorLink;
+		@include blueLink;
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5 {
+		margin-bottom: 32px;
+	}
+
+	h1 {
+		font-size: 36px;
+		font-weight: 700;
+		line-height: 130%;
+	}
+
+	h2 {
+		font-size: 36px;
+		font-weight: 600;
+	}
+
+	h3 {
+		font-size: 32px;
+		font-weight: 500;
+	}
+
+	h4 {
+		font-size: 24px;
+		font-weight: 500;
+	}
+
+	h5 {
+		font-size: 20px;
+		font-weight: 500;
+	}
+
+	p {
+		line-height: 170%;
 	}
 }
 
+.content-wrapper {
+	max-width: 1120px;
+	margin: 0 auto;
+	padding: 0 32px;
+}
+
+.site-main {
+	margin-top: 32px;
+}
+
 #masthead {
-	align-items: center;
-	display: flex;
-	justify-content: space-between;
-	padding: 24px;
+	background-color: #fff;
+	box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.15);
+	padding: 32px 0;
+	position: sticky;
+	top: 0;
+	z-index: 5;
 
-	.site-logo {
+	.content-wrapper {
 		align-items: center;
-		display: grid;
-		gap: 16px;
-		grid-template-columns: 90px 1fr;
-		width: 100%;
+		display: flex;
+		justify-content: space-between;
 
-		a {
-			line-height: 0;
-		}
-
-		a.site-name {
-			@include grayLink;
-			font-size: 32px;
-			font-weight: 700;
-			line-height: 100%;
-		}
-	}
-
-	.main-navigation {
-		ul {
+		.site-logo {
+			align-items: center;
 			display: flex;
 			gap: 16px;
-			justify-content: flex-end;
+			width: 100%;
 
-			li {
-				a {
-					@include grayLink;
-					font-size: 16px;
-				}
+			a {
+				line-height: 0;
+			}
 
-				&.menu-item-has-children {
-					> a {
-						align-items: center;
-						display: flex;
+			a.site-name {
+				@include grayLink;
+				font-size: 32px;
+				font-weight: 700;
+				line-height: 100%;
+			}
+		}
 
-						&::after {
-							border-top: 6px dashed;
-							border-right: 6px solid transparent;
-							border-left: 6px solid transparent;
-							content: '';
+		.main-navigation {
+			ul {
+				display: flex;
+				gap: 16px;
+				justify-content: flex-end;
+
+				li {
+					a {
+						@include grayLink;
+						font-size: 16px;
+					}
+
+					&.menu-item-has-children {
+						> a {
+							align-items: center;
+							display: flex;
+
+							&::after {
+								border-top: 6px dashed;
+								border-right: 6px solid transparent;
+								border-left: 6px solid transparent;
+								content: '';
+							}
 						}
 					}
-				}
 
-				.sub-menu {
-					background: $background;
-					padding: 16px;
+					.sub-menu {
+						background: $background;
+						padding: 16px;
 
-					a {
-						color: inherit;
+						a {
+							color: inherit;
 
-						&:hover {
-							color: $orange;
-						}
+							&:hover {
+								color: $orange;
+							}
 
-						&:active {
-							color: $orange;
+							&:active {
+								color: $orange;
+							}
 						}
 					}
 				}
 			}
 		}
+	}
+}
+
+.admin-bar {
+	#masthead {
+		top: 32px;
 	}
 }

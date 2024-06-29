@@ -24,20 +24,22 @@
 <?php wp_body_open(); ?>
 <div id="page" class="site">
 	<header id="masthead" class="site-header">
+		<div class="content-wrapper">
 			<div class="site-logo">
 				<?php the_custom_logo(); ?>
 				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="site-name" rel="home"><?php bloginfo( 'name' ); ?></a>
 			</div>
 
 			<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'mixed-reef-tank' ); ?></button>
-			<?php
-			wp_nav_menu(
-				array(
-					'theme_location' => 'menu-1',
-					'menu_id'        => 'primary-menu',
-				)
-			);
-			?>
-		</nav><!-- #site-navigation -->
+				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'mixed-reef-tank' ); ?></button>
+				<?php
+				wp_nav_menu(
+					array(
+						'theme_location' => 'menu-1',
+						'menu_id'        => 'primary-menu',
+					)
+				);
+				?>
+			</nav><!-- #site-navigation -->
+		</dvi>
 	</header><!-- #masthead -->
