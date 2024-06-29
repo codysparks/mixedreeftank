@@ -50,25 +50,42 @@ get_header();
 
                     if ($featured_posts->have_posts()) :
                         while ($featured_posts->have_posts()) : $featured_posts->the_post();
-                        $sticky_posts[] = get_the_ID();
-                    ?>
+                            $sticky_posts[] = get_the_ID();
+                            ?>
                             <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
                                 <header class="entry-header">
-                                    <?php
-                                    if (has_post_thumbnail()) :
-                                        the_post_thumbnail();
-                                    endif;
-                                    ?>
-                                    <h3 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+                                    <a href="<?php the_permalink(); ?>">
+                                        <?php
+                                        if (has_post_thumbnail()) :
+                                            the_post_thumbnail();
+                                        endif;
+                    
+                                        // Get the primary category ID set by RankMath
+                                        $primary_category_id = get_post_meta(get_the_ID(), 'rank_math_primary_category', true);
+                                        $category_link = get_category_link($primary_category_id);
+                                        ?>
+                                    </a>
+
+                                    <div class="entry-meta">
+                                        <h3 class="entry-title"><?php the_title(); ?></h3>
+
+                                        <?php if($primary_category_id): ?>
+                                            <p class="entry-category"><a href="<?= esc_url($category_link); ?>"><?= esc_html(get_category($primary_category_id)->cat_name); ?></a></p>
+                                        <?php endif; ?>
+
+                                        <p class="entry-read-time"><?= do_shortcode('[rt_reading_time post_id="' . get_the_ID() . '"]'); ?> min read</p>
+                                    </div>
                                 </header><!-- .entry-header -->
                             </article><!-- #post-<?php the_ID(); ?> -->
-                    <?php
+                            <?php
                         endwhile;
                         wp_reset_postdata();
                     else:
                         echo '<p>No featured posts found.</p>';
                     endif;
                     ?>
+
+                    <div class="bg-box"></div>
                 </div>
             </section>
 
@@ -78,7 +95,7 @@ get_header();
                 <div class="lastest-posts-wrapper">
                     <?php
                     $args = array(
-                        'posts_per_page' => 10,
+                        'posts_per_page' => 6,
                         'post__not_in' => $sticky_posts,
                     );
                     $latest_posts = new WP_Query($args);
@@ -88,12 +105,25 @@ get_header();
                     ?>
                             <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
                                 <header class="entry-header">
-                                    <?php
-                                    if (has_post_thumbnail()) :
-                                        the_post_thumbnail();
-                                    endif;
-                                    ?>
-                                    <h3 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+                                    <a href="<?php the_permalink(); ?>">
+                                        <?php
+                                        if (has_post_thumbnail()) :
+                                            the_post_thumbnail();
+                                        endif;
+
+                                        // Get the primary category ID set by RankMath
+                                        $primary_category_id = get_post_meta(get_the_ID(), 'rank_math_primary_category', true);
+                                        $category_link = get_category_link($primary_category_id);
+                                        ?>
+                                    </a>
+
+                                    <div class="entry-meta">
+                                        <h3 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+                                        <?php if($primary_category_id): ?>
+                                            <p class="entry-category"><a href="<?= esc_url($category_link); ?>"><?= esc_html(get_category($primary_category_id)->cat_name); ?></a></p>
+                                        <?php endif; ?>
+                                        <p class="entry-read-time"><?= do_shortcode('[rt_reading_time post_id="' . get_the_ID() . '"]'); ?> min read</p>
+                                    </div>
                                 </header><!-- .entry-header -->
                             </article><!-- #post-<?php the_ID(); ?> -->
                     <?php
@@ -103,6 +133,54 @@ get_header();
                         echo '<p>No lastest posts found.</p>';
                     endif;
                     ?>
+                </div>
+            </section>
+
+            <section class="category-posts">
+                <h2>Categories</h2>
+
+                <div class="category-posts-wrapper">
+                    <div class="category-section">
+                        <a href="/setup">
+                            <img src="http://mixedreeftank.local/wp-content/uploads/2024/01/header.jpg" alt="Setup">
+                            <h3>Setting Up Your Saltwater Aquarium</h3>
+                        </a>
+                    </div>
+
+                    <div class="category-section">
+                        <a href="/fish">
+                            <img src="http://mixedreeftank.local/wp-content/uploads/2024/01/header.jpg" alt="Setup">
+                            <h3>Saltwater Fish Care</h3>
+                        </a>
+                    </div>
+
+                    <div class="category-section">
+                        <a href="/coral">
+                            <img src="http://mixedreeftank.local/wp-content/uploads/2024/01/header.jpg" alt="Setup">
+                            <h3>Coral Care</h3>
+                        </a>
+                    </div>
+
+                    <div class="category-section">
+                        <a href="/maintenance">
+                            <img src="http://mixedreeftank.local/wp-content/uploads/2024/01/header.jpg" alt="Setup">
+                            <h3>Saltwater Aquarium Maintenance</h3>
+                        </a>
+                    </div>
+
+                    <div class="category-section">
+                        <a href="/chemistry">
+                            <img src="http://mixedreeftank.local/wp-content/uploads/2024/01/header.jpg" alt="Setup">
+                            <h3>Water Chemistry</h3>
+                        </a>
+                    </div>
+
+                    <div class="category-section">
+                        <a href="/equipment">
+                            <img src="http://mixedreeftank.local/wp-content/uploads/2024/01/header.jpg" alt="Setup">
+                            <h3>Aquarium Equipment</h3>
+                        </a>
+                    </div>                            
                 </div>
             </section>
         </div>

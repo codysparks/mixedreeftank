@@ -21,18 +21,18 @@ body {
 
 	h1 {
 		font-size: 36px;
-		font-weight: 700;
+		font-weight: 900;
 		line-height: 130%;
 	}
 
 	h2 {
 		font-size: 36px;
-		font-weight: 600;
+		font-weight: 900;
 	}
 
 	h3 {
 		font-size: 32px;
-		font-weight: 500;
+		font-weight: 700;
 	}
 
 	h4 {
@@ -86,7 +86,7 @@ body {
 			a.site-name {
 				@include grayLink;
 				font-size: 32px;
-				font-weight: 700;
+				font-weight: 800;
 				line-height: 100%;
 			}
 		}
@@ -94,7 +94,7 @@ body {
 		.main-navigation {
 			ul {
 				display: flex;
-				gap: 16px;
+				gap: 32px;
 				justify-content: flex-end;
 
 				li {

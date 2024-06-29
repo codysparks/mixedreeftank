@@ -2,12 +2,29 @@
 @import './mixins.scss';
 
 .home {
+	section {
+		margin-bottom: 124px;
+		position: relative;
+
+		h2 {
+			text-align: center;
+
+			&::after {
+				border-bottom: 5px $orange solid;
+				content: '';
+				display: flex;
+				height: 5px;
+				margin: 32px auto 0;
+				width: 50px;
+			}
+		}
+	}
+
 	.featured {
 		align-items: center;
 		display: grid;
 		gap: 64px;
 		grid-template-columns: 1fr 1fr;
-		margin-bottom: 80px;
 
 		a {
 			@include blueButton;
@@ -25,30 +42,213 @@
 				position: absolute;
 				top: 32px;
 				right: -32px;
-				height: 450px;
-				width: 450px;
+				height: 100%;
+				width: 100%;
 				z-index: -1;
 			}
 		}
 	}
 
 	.featured-posts {
-		h2 {
-			text-align: center;
+		.featured-posts-wrapper {
+			display: grid;
+			gap: 32px;
+			grid-template-columns: repeat(3, 1fr);
 
-			&::after {
-				border-bottom: 5px $orange solid;
-				content: '';
-				display: flex;
-				height: 5px;
-				margin: 32px auto 0;
-				width: 50px;
+			article {
+				overflow: hidden;
+
+				.entry-header > a {
+					background-image: none;
+					color: #fff;
+					display: block;
+					line-height: 0;
+
+					img {
+						height: 315px;
+						filter: brightness(75%);
+						margin-left: -50%;
+						max-width: fit-content;
+						transition: filter 0.3s ease-in-out;
+					}
+				}
+
+				.entry-header {
+					position: relative;
+
+					&:hover {
+						img {
+							filter: brightness(40%);
+						}
+					}
+
+					.entry-meta {
+						padding: 0 32px;
+						pointer-events: none;
+						position: absolute;
+						bottom: 0;
+						z-index: 0;
+
+						.entry-category {
+							margin-bottom: 4px;
+
+							a {
+								@include blueButton;
+								font-size: 14px;
+								padding: 4px 12px;
+								pointer-events: all;
+							}
+						}
+
+						h3.entry-title {
+							color: #fff;
+							font-size: 24px;
+							margin-bottom: 8px;
+						}
+
+						.entry-read-time {
+							color: #e3e3e3;
+							font-size: 16px;
+							margin-bottom: 0;
+							pointer-events: none;
+						}
+					}
+				}
 			}
 		}
 
-		.featured-posts-wrapper {
+		.bg-box {
+			background-color: #f2f3f3;
+			content: '';
+			display: inline-block;
+			height: 60%;
+			position: absolute;
+			bottom: -32px;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 75%;
+			z-index: -1;
+		}
+	}
+
+	.latest-posts {
+		margin-bottom: 92px;
+		.lastest-posts-wrapper {
 			display: grid;
+			gap: 32px;
 			grid-template-columns: repeat(3, 1fr);
+			row-gap: 64px;
+
+			article {
+				overflow: hidden;
+
+				.entry-header {
+					position: relative;
+
+					> a {
+						background-image: none;
+						color: #fff;
+						display: block;
+						line-height: 0;
+						margin-bottom: 16px;
+					}
+
+					img {
+						height: 200px;
+						margin-left: -25%;
+						max-width: fit-content;
+						transition: filter 0.3s ease-in-out;
+
+						&:hover {
+							filter: brightness(75%);
+						}
+					}
+
+					.entry-meta {
+						.entry-category {
+							margin-bottom: 4px;
+
+							a {
+								@include blueButton;
+								font-size: 14px;
+								padding: 4px 12px;
+								pointer-events: all;
+							}
+						}
+
+						h3.entry-title {
+							font-size: 24px;
+							margin-bottom: 8px;
+
+							a {
+								@include grayLink;
+							}
+						}
+
+						.entry-read-time {
+							color: #797979;
+							font-size: 14px;
+							margin-bottom: 0;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.category-posts {
+		.category-posts-wrapper {
+			display: grid;
+			gap: 32px;
+			grid-template-columns: repeat(3, 1fr);
+
+			.category-section {
+				position: relative;
+				overflow: hidden;
+
+				> a {
+					background-image: none;
+					color: #fff;
+					display: flex;
+
+					img {
+						height: 315px;
+						filter: brightness(75%);
+						margin-left: -50%;
+						max-width: fit-content;
+						transition: filter 0.3s ease-in-out;
+					}
+
+					&:hover {
+						img {
+							filter: brightness(40%);
+						}
+					}
+				}
+
+				h3 {
+					color: #fff;
+					font-size: 24px;
+					padding: 0 32px;
+					pointer-events: none;
+					position: absolute;
+					bottom: 0;
+					z-index: 0;
+				}
+			}
+		}
+
+		.bg-box {
+			background-color: #f2f3f3;
+			content: '';
+			display: inline-block;
+			height: 80px;
+			position: absolute;
+			bottom: -32px;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 75%;
+			z-index: -1;
 		}
 	}
 }

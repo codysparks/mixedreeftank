@@ -6,22 +6,34 @@ body {
   font-size: 18px;
 }
 body a {
-  color: #2b92ec;
+  background-position: 0 100%;
+  background-size: 0% 2px;
+  background-repeat: no-repeat;
+  position: relative;
   text-decoration: none;
-  transition: color 0.25s ease-in-out;
+  transition: background-size 0.5s, background-position 0s 0.5s, color 0.25s ease-in-out;
+  background-image: linear-gradient(#424851 0 0);
+  color: #2b92ec;
+}
+body a:hover, body a:focus {
+  background-position: 100% 100%;
+  background-size: 100% 2px;
+}
+body a:active {
+  transition: none;
+}
+body a:focus {
+  outline: thin dotted;
 }
 body a:visited {
   color: #2b92ec;
 }
 body a:hover, body a:focus {
   color: #424851;
-  text-decoration: underline;
 }
 body a:active {
+  background-image: linear-gradient(#f7a072 0 0);
   color: #f7a072;
-}
-body a:focus {
-  outline: thin dotted;
 }
 body h1,
 body h2,
@@ -32,16 +44,16 @@ body h5 {
 }
 body h1 {
   font-size: 36px;
-  font-weight: 700;
+  font-weight: 900;
   line-height: 130%;
 }
 body h2 {
   font-size: 36px;
-  font-weight: 600;
+  font-weight: 900;
 }
 body h3 {
   font-size: 32px;
-  font-weight: 500;
+  font-weight: 700;
 }
 body h4 {
   font-size: 24px;
@@ -88,49 +100,73 @@ body p {
   line-height: 0;
 }
 #masthead .content-wrapper .site-logo a.site-name {
-  color: #424851;
+  background-position: 0 100%;
+  background-size: 0% 2px;
+  background-repeat: no-repeat;
+  position: relative;
   text-decoration: none;
-  transition: color 0.25s ease-in-out;
+  transition: background-size 0.5s, background-position 0s 0.5s, color 0.25s ease-in-out;
+  background-image: linear-gradient(#2b92ec 0 0);
+  color: #424851;
   font-size: 32px;
-  font-weight: 700;
+  font-weight: 800;
   line-height: 100%;
+}
+#masthead .content-wrapper .site-logo a.site-name:hover, #masthead .content-wrapper .site-logo a.site-name:focus {
+  background-position: 100% 100%;
+  background-size: 100% 2px;
+}
+#masthead .content-wrapper .site-logo a.site-name:active {
+  transition: none;
+}
+#masthead .content-wrapper .site-logo a.site-name:focus {
+  outline: thin dotted;
 }
 #masthead .content-wrapper .site-logo a.site-name:visited {
   color: #424851;
 }
 #masthead .content-wrapper .site-logo a.site-name:hover, #masthead .content-wrapper .site-logo a.site-name:focus {
   color: #2b92ec;
-  text-decoration: underline;
 }
 #masthead .content-wrapper .site-logo a.site-name:active {
+  background-image: linear-gradient(#f7a072 0 0);
   color: #f7a072;
-}
-#masthead .content-wrapper .site-logo a.site-name:focus {
-  outline: thin dotted;
 }
 #masthead .content-wrapper .main-navigation ul {
   display: flex;
-  gap: 16px;
+  gap: 32px;
   justify-content: flex-end;
 }
 #masthead .content-wrapper .main-navigation ul li a {
-  color: #424851;
+  background-position: 0 100%;
+  background-size: 0% 2px;
+  background-repeat: no-repeat;
+  position: relative;
   text-decoration: none;
-  transition: color 0.25s ease-in-out;
+  transition: background-size 0.5s, background-position 0s 0.5s, color 0.25s ease-in-out;
+  background-image: linear-gradient(#2b92ec 0 0);
+  color: #424851;
   font-size: 16px;
+}
+#masthead .content-wrapper .main-navigation ul li a:hover, #masthead .content-wrapper .main-navigation ul li a:focus {
+  background-position: 100% 100%;
+  background-size: 100% 2px;
+}
+#masthead .content-wrapper .main-navigation ul li a:active {
+  transition: none;
+}
+#masthead .content-wrapper .main-navigation ul li a:focus {
+  outline: thin dotted;
 }
 #masthead .content-wrapper .main-navigation ul li a:visited {
   color: #424851;
 }
 #masthead .content-wrapper .main-navigation ul li a:hover, #masthead .content-wrapper .main-navigation ul li a:focus {
   color: #2b92ec;
-  text-decoration: underline;
 }
 #masthead .content-wrapper .main-navigation ul li a:active {
+  background-image: linear-gradient(#f7a072 0 0);
   color: #f7a072;
-}
-#masthead .content-wrapper .main-navigation ul li a:focus {
-  outline: thin dotted;
 }
 #masthead .content-wrapper .main-navigation ul li.menu-item-has-children > a {
   align-items: center;
