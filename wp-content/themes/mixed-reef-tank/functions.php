@@ -50,6 +50,8 @@ function mixed_reef_tank_setup() {
 	register_nav_menus(
 		array(
 			'menu-1' => esc_html__( 'Primary', 'mixed-reef-tank' ),
+			'menu-2' => esc_html__( 'Footer 1', 'footer-1-mixed-reef-tank' ),
+			'menu-3' => esc_html__( 'Footer 2', 'footer-2-mixed-reef-tank' ),
 		)
 	);
 

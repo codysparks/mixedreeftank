@@ -11,20 +11,46 @@
 
 ?>
 
+	<div id="before_footer"><img src="/wp-content/themes/mixed-reef-tank/img/wave.svg" alt="Footer Design" /></div>
+	
 	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'mixed-reef-tank' ) ); ?>">
+		<div class="content-wrapper">
+			<div class="columns">
+				<div class="column">
+					<p><strong>Mixed Reef Tank</strong></p>
+
+					<p>With over a decade of experience in saltwater aquariums, find expert articles in fish care and coral health.</p>
+				</div>
+
+				<div class="column">
+					<p><strong>Learn</strong></p>
+					
 				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'mixed-reef-tank' ), 'WordPress' );
+					wp_nav_menu(array(
+						'theme_location' => 'menu-2',
+						'menu_id'        => 'menu-2',
+						'menu_class'     => 'footer-menu',
+					));
 				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'mixed-reef-tank' ), 'mixed-reef-tank', '<a href="http://underscores.me/">Underscores.me</a>' );
+				</div>
+
+				<div class="column">
+					<p><strong>Resources</strong></p>
+
+					<?php
+				
+					wp_nav_menu(array(
+						'theme_location' => 'menu-3',
+						'menu_id'        => 'menu-3',
+						'menu_class'     => 'footer-menu',
+					));
 				?>
-		</div><!-- .site-info -->
+				</div>
+			</div>
+
+			<hr>
+			<p class="copyright"><em>Copyright <?= date('Y'); ?> · All rights reserved</em></p>
+		</div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 

@@ -66,6 +66,9 @@ body h5 {
 body p {
   line-height: 170%;
 }
+body img {
+  vertical-align: middle;
+}
 
 .content-wrapper {
   max-width: 1120px;
@@ -194,6 +197,52 @@ body p {
 
 .admin-bar #masthead {
   top: 32px;
+}
+
+#before_footer img {
+  margin-bottom: -1px;
+  width: 100%;
+}
+
+footer {
+  background-color: #2b92ec;
+  color: #fff;
+  padding: 64px 0 32px;
+}
+footer .content-wrapper .columns {
+  display: grid;
+  gap: 64px;
+  grid-template-columns: repeat(3, 1fr);
+  margin-bottom: 64px;
+}
+footer .content-wrapper .columns p {
+  font-size: 16px;
+}
+footer .content-wrapper .columns p:has(strong) {
+  font-size: 20px;
+}
+footer .content-wrapper .columns ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+footer .content-wrapper .columns a {
+  color: #fff;
+  font-size: 16px;
+}
+footer .content-wrapper .columns a:visited {
+  color: #fff;
+}
+footer .content-wrapper .columns a:hover {
+  color: #424851;
+}
+footer .content-wrapper .columns a:active {
+  color: #f7a072;
+}
+footer .copyright {
+  font-size: 14px;
+  margin-bottom: 0;
+  text-align: center;
 }
 
 /*# sourceMappingURL=global.css.map */
