@@ -67,7 +67,7 @@ body {
 #masthead {
 	background-color: #fff;
 	box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.15);
-	padding: 32px 0;
+	padding: 20px 0;
 	position: sticky;
 	top: 0;
 	z-index: 5;
@@ -80,8 +80,8 @@ body {
 		.site-logo {
 			align-items: center;
 			display: flex;
+			flex: 2;
 			gap: 16px;
-			width: 100%;
 
 			a {
 				line-height: 0;
@@ -96,6 +96,11 @@ body {
 		}
 
 		.main-navigation {
+			flex: 3;
+			overflow: hidden;
+			padding: 16px 0;
+			position: relative;
+
 			ul {
 				display: flex;
 				gap: 32px;
@@ -139,6 +144,75 @@ body {
 					}
 				}
 			}
+
+			.search-form {
+				display: flex;
+				position: absolute;
+				right: 0;
+				top: 50%;
+				transform: translate(100%, -50%);
+				opacity: 0;
+				transition: opacity 0.25s, transform 0.25s;
+				width: 100%;
+
+				input[type='text'] {
+					border-radius: 5px 0 0 5px;
+					border-right: none;
+					outline: none;
+					width: 100%;
+
+					&:hover {
+						border-color: #999;
+					}
+
+					&:focus {
+						border-color: $orange;
+					}
+				}
+
+				button {
+					@include blueButton;
+					border: none;
+					border-radius: 0 5px 5px 0;
+					cursor: pointer;
+				}
+
+				&.active {
+					transform: translate(0, -50%);
+					opacity: 1;
+				}
+			}
+		}
+
+		.search-btn {
+			line-height: 0;
+			padding-left: 32px;
+
+			svg {
+				cursor: pointer;
+				height: 20px;
+				width: 20px;
+
+				circle,
+				line {
+					pointer-events: none;
+					stroke: $gray;
+				}
+
+				&:hover {
+					circle,
+					line {
+						stroke: $blue;
+					}
+				}
+
+				&:active {
+					circle,
+					line {
+						stroke: $orange;
+					}
+				}
+			}
 		}
 	}
 }
@@ -156,7 +230,7 @@ body {
 	}
 }
 
-footer {
+footer.site-footer {
 	background-color: $blue;
 	color: #fff;
 	padding: 64px 0 32px;
@@ -205,5 +279,11 @@ footer {
 		font-size: 14px;
 		margin-bottom: 0;
 		text-align: center;
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	.menu-toggle {
+		display: inline-block;
 	}
 }

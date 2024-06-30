@@ -31,7 +31,7 @@
 			</div>
 
 			<nav id="site-navigation" class="main-navigation">
-				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'mixed-reef-tank' ); ?></button>
+				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">Mobile</button>
 				<?php
 				wp_nav_menu(
 					array(
@@ -40,6 +40,15 @@
 					)
 				);
 				?>
+				
+				<?= get_search_form( ); ?>
 			</nav><!-- #site-navigation -->
+
+			<div class="search-btn">
+				<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+					<circle cx="27" cy="27" r="16" stroke="black" stroke-width="4" fill="none"/>
+					<line x1="41" y1="41" x2="58" y2="58" stroke="black" stroke-width="4"/>
+				</svg>
+			</div>
 		</dvi>
 	</header><!-- #masthead -->

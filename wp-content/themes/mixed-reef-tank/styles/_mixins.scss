@@ -71,6 +71,7 @@
 	position: relative;
 	text-decoration: none;
 	transition: all 0.75s;
+	z-index: 0;
 
 	&::after {
 		background-color: $blue;
