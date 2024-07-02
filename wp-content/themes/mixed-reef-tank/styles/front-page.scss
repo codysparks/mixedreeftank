@@ -18,6 +18,12 @@
 				width: 100px;
 			}
 		}
+
+		h3 {
+			color: #fff;
+			font-size: 24px;
+			margin-bottom: 8px;
+		}
 	}
 
 	.featured {
@@ -83,7 +89,7 @@
 					}
 
 					.entry-meta {
-						padding: 0 32px;
+						padding: 0 32px 16px;
 						pointer-events: none;
 						position: absolute;
 						bottom: 0;
@@ -98,12 +104,6 @@
 								padding: 4px 12px;
 								pointer-events: all;
 							}
-						}
-
-						h3.entry-title {
-							color: #fff;
-							font-size: 24px;
-							margin-bottom: 8px;
 						}
 
 						.entry-read-time {
@@ -176,10 +176,7 @@
 							}
 						}
 
-						h3.entry-title {
-							font-size: 24px;
-							margin-bottom: 8px;
-
+						h3 {
 							a {
 								@include grayLink;
 							}
@@ -227,9 +224,8 @@
 				}
 
 				h3 {
-					color: #fff;
-					font-size: 24px;
-					padding: 0 32px;
+					margin: 0;
+					padding: 32px;
 					pointer-events: none;
 					position: absolute;
 					bottom: 0;
@@ -237,18 +233,96 @@
 				}
 			}
 		}
+	}
+}
 
-		.bg-box {
-			background-color: $light-gray;
-			content: '';
-			display: inline-block;
-			height: 80px;
-			position: absolute;
-			bottom: -32px;
-			left: 50%;
-			transform: translateX(-50%);
-			width: 75%;
-			z-index: -1;
+@media only screen and (max-width: $tablet-size) {
+	.home {
+		section {
+			h3 {
+				font-size: 20px;
+			}
+		}
+
+		.latest-posts {
+			margin-bottom: 46px;
+
+			.lastest-posts-wrapper {
+				gap: 16px;
+				grid-template-columns: repeat(2, 1fr);
+				row-gap: 32px;
+			}
+		}
+
+		.category-posts {
+			.category-posts-wrapper {
+				gap: 16px;
+				grid-template-columns: repeat(2, 1fr);
+				row-gap: 32px;
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: $mobile-size) {
+	.home {
+		section {
+			margin-bottom: 64px;
+		}
+
+		.featured {
+			gap: 64px;
+			grid-template-columns: 1fr;
+
+			.featured-img {
+				overflow-x: clip;
+			}
+		}
+
+		.featured-posts {
+			.featured-posts-wrapper {
+				grid-template-columns: 1fr;
+
+				article {
+					.entry-header {
+						.entry-meta {
+							padding: 0 16px 8px;
+						}
+					}
+				}
+			}
+
+			.bg-box {
+				height: 80%;
+			}
+		}
+
+		.latest-posts {
+			margin-bottom: 46px;
+		}
+
+		.category-posts {
+			.category-posts-wrapper {
+				gap: 16px;
+				grid-template-columns: repeat(2, 1fr);
+				row-gap: 32px;
+
+				.category-section {
+					h3 {
+						padding: 0 16px 16px;
+					}
+
+					&:first-child {
+						grid-column-start: 1;
+						grid-column-end: 3;
+					}
+
+					&:nth-child(4) {
+						grid-column-start: 1;
+						grid-column-end: 3;
+					}
+				}
+			}
 		}
 	}
 }
