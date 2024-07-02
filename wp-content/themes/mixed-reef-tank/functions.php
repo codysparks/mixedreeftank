@@ -161,6 +161,10 @@ function mixed_reef_tank_scripts() {
 	if(is_archive()) {
 		wp_enqueue_style('category', get_theme_file_uri('/styles/css/category-page.css'), array(), filemtime(get_template_directory() .'/styles/css/category-page.css'));
 	}
+
+	if(is_single()) {
+		wp_enqueue_style('category', get_theme_file_uri('/styles/css/blog-page.css'), array(), filemtime(get_template_directory() .'/styles/css/blog-page.css'));
+	}
 }
 add_action( 'wp_enqueue_scripts', 'mixed_reef_tank_scripts' );
 
