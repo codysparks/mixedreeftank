@@ -54,6 +54,10 @@ body {
 	}
 }
 
+.lock {
+	overflow: hidden;
+}
+
 .content-wrapper {
 	max-width: 1120px;
 	margin: 0 auto;
@@ -80,7 +84,6 @@ body {
 		.site-logo {
 			align-items: center;
 			display: flex;
-			flex: 2;
 			gap: 16px;
 
 			a {
@@ -96,90 +99,103 @@ body {
 		}
 
 		.main-navigation {
-			flex: 3;
+			flex: 1;
 			overflow: hidden;
 			padding: 16px 0;
 			position: relative;
 
-			ul {
-				display: flex;
-				gap: 32px;
-				justify-content: flex-end;
-
-				li {
-					a {
-						@include grayLink;
-						font-size: 16px;
-					}
-
-					&.menu-item-has-children {
-						> a {
-							align-items: center;
-							display: flex;
-
-							&::after {
-								border-top: 6px dashed;
-								border-right: 6px solid transparent;
-								border-left: 6px solid transparent;
-								content: '';
-							}
-						}
-					}
-
-					.sub-menu {
-						background: $background;
-						padding: 16px;
-
-						a {
-							color: inherit;
-
-							&:hover {
-								color: $orange;
-							}
-
-							&:active {
-								color: $orange;
-							}
-						}
-					}
-				}
+			.menu-toggle,
+			.menu-close {
+				display: none;
 			}
 
-			.search-form {
-				display: flex;
-				position: absolute;
-				right: 0;
-				top: 50%;
-				transform: translate(100%, -50%);
-				opacity: 0;
-				transition: opacity 0.25s, transform 0.25s;
-				width: 100%;
+			.site-navigation-wrapper {
+				overflow: auto;
 
-				input[type='text'] {
-					border-radius: 5px 0 0 5px;
-					border-right: none;
-					outline: none;
+				p {
+					display: none;
+				}
+
+				ul {
+					display: flex;
+					gap: 32px;
+					justify-content: flex-end;
+
+					li {
+						a {
+							@include grayLink;
+							font-size: 16px;
+						}
+
+						&.menu-item-has-children {
+							> a {
+								align-items: center;
+								display: flex;
+
+								&::after {
+									border-top: 6px dashed;
+									border-right: 6px solid transparent;
+									border-left: 6px solid transparent;
+									content: '';
+								}
+							}
+						}
+
+						.sub-menu {
+							background: $background;
+							padding: 16px;
+
+							a {
+								color: inherit;
+
+								&:hover {
+									color: $orange;
+								}
+
+								&:active {
+									color: $orange;
+								}
+							}
+						}
+					}
+				}
+
+				.search-form {
+					display: flex;
+					position: absolute;
+					right: 0;
+					top: 50%;
+					transform: translate(100%, -50%);
+					opacity: 0;
+					transition: opacity 0.25s, transform 0.25s;
 					width: 100%;
 
-					&:hover {
-						border-color: #999;
+					input[type='text'] {
+						border-radius: 5px 0 0 5px;
+						border-right-width: 0;
+						outline: none;
+						width: 100%;
+
+						&:hover {
+							border-color: #999;
+						}
+
+						&:focus {
+							border-color: $orange;
+						}
 					}
 
-					&:focus {
-						border-color: $orange;
+					button {
+						@include blueButton;
+						border: none;
+						border-radius: 0 5px 5px 0;
+						cursor: pointer;
 					}
-				}
 
-				button {
-					@include blueButton;
-					border: none;
-					border-radius: 0 5px 5px 0;
-					cursor: pointer;
-				}
-
-				&.active {
-					transform: translate(0, -50%);
-					opacity: 1;
+					&.active {
+						transform: translate(0, -50%);
+						opacity: 1;
+					}
 				}
 			}
 		}
@@ -282,8 +298,187 @@ footer.site-footer {
 	}
 }
 
-@media only screen and (max-width: 768px) {
-	.menu-toggle {
-		display: inline-block;
+.overlay {
+	background: #000;
+	height: 100%;
+	opacity: 0.7;
+	position: fixed;
+	top: 0;
+	left: 0;
+	transition: visibility 0.5s ease-in-out;
+	visibility: hidden;
+	width: 100%;
+	z-index: 8;
+}
+
+@media only screen and (max-width: $table-size) {
+	.content-wrapper {
+		padding: 0 16px;
+	}
+
+	#masthead .content-wrapper {
+		.search-btn {
+			display: none;
+		}
+
+		.main-navigation {
+			padding: 0;
+			text-align: right;
+
+			.menu-toggle {
+				background: none;
+				border: none;
+				cursor: pointer;
+				display: inline-flex;
+				flex-direction: column;
+				padding: 0;
+				width: 36px;
+				vertical-align: top;
+
+				span {
+					@include blueButton;
+					border-radius: 10px;
+					height: 4px;
+					margin: 4px 0;
+					padding: 0;
+					width: 100%;
+
+					&::after {
+						background-color: $gray;
+					}
+
+					&::before {
+						background-color: $blue;
+					}
+				}
+
+				&:hover span {
+					&:before {
+						width: 100%;
+					}
+				}
+
+				&:active span {
+					&:before {
+						background-color: $orange;
+						transition: none;
+					}
+				}
+			}
+
+			.menu-close {
+				background: none;
+				border: none;
+				cursor: pointer;
+				display: block;
+				line-height: 0;
+				padding: 0;
+				position: absolute;
+				top: 24px;
+				right: 24px;
+
+				&:hover {
+					.mask-rect2 {
+						width: 100%;
+					}
+				}
+
+				&:active {
+					#x2 {
+						fill: $orange;
+					}
+				}
+
+				svg {
+					height: 36px;
+					pointer-events: none;
+					width: 36px;
+
+					#x1 {
+						fill: $gray;
+					}
+
+					#x2 {
+						fill: $blue;
+					}
+
+					.mask-rect1,
+					.mask-rect2 {
+						transition: width 0.5s ease-in-out;
+						width: 0;
+					}
+
+					.mask-rect1 {
+						width: 100%;
+					}
+				}
+			}
+
+			.site-navigation-wrapper {
+				background: #fff;
+				height: 100%;
+				margin: 0;
+				padding: 32px;
+				position: fixed;
+				text-align: left;
+				transform: translateX(100%);
+				transition: transform 0.5s ease-out;
+				top: 0;
+				right: 0;
+				width: 50%;
+				z-index: 10;
+
+				p {
+					display: block;
+					font-size: 24px;
+				}
+
+				ul {
+					background: $light-gray;
+					display: block;
+					margin-bottom: 32px;
+					padding: 16px;
+
+					li {
+						padding-bottom: 32px;
+						width: fit-content;
+
+						&:last-child {
+							padding-bottom: 0;
+						}
+					}
+				}
+
+				.search-form {
+					background: $light-gray;
+					padding: 16px;
+					display: block;
+					position: initial;
+					transform: none;
+					opacity: 1;
+					transition: none;
+
+					input[type='text'] {
+						border-radius: 5px;
+						border-right-width: 1px;
+						margin-bottom: 16px;
+					}
+
+					button {
+						border-radius: 5px;
+					}
+				}
+			}
+
+			&.active {
+				.site-navigation-wrapper {
+					transform: translateX(0);
+				}
+
+				.overlay {
+					visibility: visible;
+				}
+			}
+		}
 	}
 }

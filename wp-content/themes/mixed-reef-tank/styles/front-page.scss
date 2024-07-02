@@ -36,7 +36,7 @@
 			width: fit-content;
 
 			&::after {
-				background-color: #f2f3f3;
+				background-color: $light-gray;
 				content: '';
 				display: block;
 				position: absolute;
@@ -118,7 +118,7 @@
 		}
 
 		.bg-box {
-			background-color: #f2f3f3;
+			background-color: $light-gray;
 			content: '';
 			display: inline-block;
 			height: 60%;
@@ -239,7 +239,7 @@
 		}
 
 		.bg-box {
-			background-color: #f2f3f3;
+			background-color: $light-gray;
 			content: '';
 			display: inline-block;
 			height: 80px;
