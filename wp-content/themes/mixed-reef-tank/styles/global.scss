@@ -65,7 +65,7 @@ body {
 }
 
 .site-main {
-	margin-top: 32px;
+	margin-top: 16px;
 }
 
 #masthead {
@@ -79,13 +79,10 @@ body {
 	.content-wrapper {
 		align-items: center;
 		display: flex;
+		gap: 32px;
 		justify-content: space-between;
 
 		.site-logo {
-			align-items: center;
-			display: flex;
-			gap: 16px;
-
 			a {
 				line-height: 0;
 			}
@@ -202,7 +199,6 @@ body {
 
 		.search-btn {
 			line-height: 0;
-			padding-left: 32px;
 
 			svg {
 				cursor: pointer;
@@ -311,6 +307,12 @@ footer.site-footer {
 	visibility: hidden;
 	width: 100%;
 	z-index: 8;
+}
+
+@media only screen and (max-width: $laptop-size) {
+	#masthead .content-wrapper .main-navigation .site-navigation-wrapper ul {
+		gap: 24px;
+	}
 }
 
 @media only screen and (max-width: $tablet-size) {

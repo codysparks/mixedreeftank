@@ -81,7 +81,7 @@ body img {
 }
 
 .site-main {
-  margin-top: 32px;
+  margin-top: 16px;
 }
 
 #masthead {
@@ -95,12 +95,8 @@ body img {
 #masthead .content-wrapper {
   align-items: center;
   display: flex;
+  gap: 32px;
   justify-content: space-between;
-}
-#masthead .content-wrapper .site-logo {
-  align-items: center;
-  display: flex;
-  gap: 16px;
 }
 #masthead .content-wrapper .site-logo a {
   line-height: 0;
@@ -279,13 +275,18 @@ body img {
   background-color: #f7a072;
   transition: none;
 }
+#masthead .content-wrapper .main-navigation .site-navigation-wrapper .search-form button::after {
+  background-color: #2b92ec;
+}
+#masthead .content-wrapper .main-navigation .site-navigation-wrapper .search-form button::before {
+  background-color: #424851;
+}
 #masthead .content-wrapper .main-navigation .site-navigation-wrapper .search-form.active {
   transform: translate(0, -50%);
   opacity: 1;
 }
 #masthead .content-wrapper .search-btn {
   line-height: 0;
-  padding-left: 32px;
 }
 #masthead .content-wrapper .search-btn svg {
   cursor: pointer;
@@ -372,6 +373,11 @@ footer.site-footer .copyright {
   z-index: 8;
 }
 
+@media only screen and (max-width: 1024px) {
+  #masthead .content-wrapper .main-navigation .site-navigation-wrapper ul {
+    gap: 24px;
+  }
+}
 @media only screen and (max-width: 900px) {
   .content-wrapper {
     padding: 0 16px;
@@ -438,6 +444,12 @@ footer.site-footer .copyright {
   #masthead .content-wrapper .main-navigation .menu-toggle span:active {
     background-color: #f7a072;
     transition: none;
+  }
+  #masthead .content-wrapper .main-navigation .menu-toggle span::after {
+    background-color: #2b92ec;
+  }
+  #masthead .content-wrapper .main-navigation .menu-toggle span::before {
+    background-color: #424851;
   }
   #masthead .content-wrapper .main-navigation .menu-toggle span::after {
     background-color: #424851;

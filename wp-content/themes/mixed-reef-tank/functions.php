@@ -157,6 +157,10 @@ function mixed_reef_tank_scripts() {
 	if(is_front_page()) {
 		wp_enqueue_style('front_page', get_theme_file_uri('/styles/css/front-page.css'), array(), filemtime(get_template_directory() .'/styles/css/front-page.css'));
 	}
+
+	if(is_archive()) {
+		wp_enqueue_style('category', get_theme_file_uri('/styles/css/category-page.css'), array(), filemtime(get_template_directory() .'/styles/css/category-page.css'));
+	}
 }
 add_action( 'wp_enqueue_scripts', 'mixed_reef_tank_scripts' );
 
@@ -216,3 +220,19 @@ add_filter( 'wp_check_filetype_and_ext', function($data, $file, $filename, $mime
 		  </style>';
   }
   add_action( 'admin_head', 'fix_svg' );
+
+// Remove 'Category:' verbiage
+function prefix_category_title( $title ) {
+	if ( is_category() ) {
+		$title = single_cat_title( '', false );
+	}
+
+	return $title;
+}
+
+add_filter( 'get_the_archive_title', 'prefix_category_title' );
+
+// Rank Math module always on bottom of page
+add_filter( 'rank_math/metabox/priority', function( $priority ) {
+	return 'low';
+});

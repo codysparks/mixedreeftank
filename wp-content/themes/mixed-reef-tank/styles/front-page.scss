@@ -2,6 +2,10 @@
 @import './mixins.scss';
 
 .home {
+	.site-main {
+		margin-top: 32px;
+	}
+
 	section {
 		margin-bottom: 124px;
 		position: relative;
@@ -134,62 +138,7 @@
 	.latest-posts {
 		margin-bottom: 92px;
 		.lastest-posts-wrapper {
-			display: grid;
-			gap: 32px;
-			grid-template-columns: repeat(3, 1fr);
-			row-gap: 64px;
-
-			article {
-				overflow: hidden;
-
-				.entry-header {
-					position: relative;
-
-					> a {
-						background-image: none;
-						color: #fff;
-						display: block;
-						line-height: 0;
-						margin-bottom: 16px;
-					}
-
-					img {
-						height: 200px;
-						margin-left: -25%;
-						max-width: fit-content;
-						transition: filter 0.3s ease-in-out;
-
-						&:hover {
-							filter: brightness(75%);
-						}
-					}
-
-					.entry-meta {
-						.entry-category {
-							margin-bottom: 4px;
-
-							a {
-								@include blueButton;
-								font-size: 14px;
-								padding: 4px 12px;
-								pointer-events: all;
-							}
-						}
-
-						h3 {
-							a {
-								@include grayLink;
-							}
-						}
-
-						.entry-read-time {
-							color: #797979;
-							font-size: 14px;
-							margin-bottom: 0;
-						}
-					}
-				}
-			}
+			@include articleCard;
 		}
 	}
 
@@ -246,12 +195,6 @@
 
 		.latest-posts {
 			margin-bottom: 46px;
-
-			.lastest-posts-wrapper {
-				gap: 16px;
-				grid-template-columns: repeat(2, 1fr);
-				row-gap: 32px;
-			}
 		}
 
 		.category-posts {

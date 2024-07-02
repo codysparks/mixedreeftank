@@ -63,7 +63,7 @@
 	}
 }
 
-@mixin blueButton {
+@mixin button {
 	background-size: 0;
 	color: #fff;
 	overflow: hidden;
@@ -105,5 +105,106 @@
 	&:active {
 		background-color: $orange;
 		transition: none;
+	}
+}
+
+@mixin blueButton {
+	@include button;
+
+	&::after {
+		background-color: $blue;
+	}
+	&::before {
+		background-color: $gray;
+	}
+}
+
+@mixin grayButton {
+	@include button;
+	color: $gray;
+
+	&::after {
+		background-color: #fff;
+	}
+	&::before {
+		background-color: $blue;
+	}
+}
+
+@mixin articleCard {
+	display: grid;
+	gap: 32px;
+	grid-template-columns: repeat(3, 1fr);
+	row-gap: 64px;
+
+	article {
+		overflow: hidden;
+
+		.entry-header {
+			position: relative;
+
+			> a {
+				background-image: none;
+				color: #fff;
+				display: block;
+				line-height: 0;
+				margin-bottom: 16px;
+			}
+
+			img {
+				height: 200px;
+				margin-left: -25%;
+				max-width: fit-content;
+				transition: filter 0.3s ease-in-out;
+
+				&:hover {
+					filter: brightness(75%);
+				}
+			}
+
+			.entry-meta {
+				.entry-category {
+					margin-bottom: 4px;
+
+					a {
+						@include blueButton;
+						font-size: 14px;
+						padding: 4px 12px;
+						pointer-events: all;
+					}
+				}
+
+				h2,
+				h3 {
+					font-size: 24px;
+					font-weight: 700;
+					margin-bottom: 8px;
+
+					a {
+						@include grayLink;
+					}
+				}
+
+				.entry-read-time {
+					color: #797979;
+					font-size: 14px;
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+
+	@media only screen and (max-width: $tablet-size) {
+		gap: 16px;
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	@media only screen and (max-width: $mobile-size) {
+		grid-template-columns: repeat(1, 1fr);
+		row-gap: 64px;
+
+		article .entry-header img {
+			margin: 0;
+		}
 	}
 }
