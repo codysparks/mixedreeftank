@@ -1,9 +1,5 @@
 /**** Colors ****/
-.single-post .site-main {
-  margin: 0;
-}
 .single-post .site-main article .entry-header .entry-category {
-  margin-top: 48px;
   text-align: center;
 }
 .single-post .site-main article .entry-header .entry-category a {
