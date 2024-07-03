@@ -234,6 +234,9 @@
   .archive.category .site-main .page-header h1 {
     text-align: left;
   }
+  .archive.category .site-main .page-header h1::after {
+    width: 100%;
+  }
   .archive.category .wp-pagenavi .page,
   .archive.category .wp-pagenavi .current,
   .archive.category .wp-pagenavi .extend {

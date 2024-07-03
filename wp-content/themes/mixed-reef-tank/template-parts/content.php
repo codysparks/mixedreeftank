@@ -7,26 +7,31 @@
  * @package test
  */
 
+ // Get the primary category ID set by RankMath
+ $primary_category_id = get_post_meta(get_the_ID(), 'rank_math_primary_category', true);
+ $category_link = get_category_link($primary_category_id);
+
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
-		<?php
-		if ( is_singular() ) :
-			the_title( '<h1 class="entry-title">', '</h1>' );
-		else :
-			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-		endif;
 
-		if ( 'post' === get_post_type() ) :
-			?>
-			<div class="entry-meta">
-				<?php
-				mixed_reef_tank_posted_on();
-				mixed_reef_tank_posted_by();
+	<?php if($primary_category_id): ?>
+		<p class="entry-category"><a href="<?= esc_url($category_link); ?>"><?= esc_html(get_category($primary_category_id)->cat_name); ?></a></p>
+	<?php endif; ?>
+
+		<?php
+			the_title( '<h1 class="entry-title">', '</h1>' );
+
+			if ( 'post' === get_post_type() ) :
 				?>
-			</div><!-- .entry-meta -->
-		<?php endif; ?>
+				<div class="entry-meta">
+					<?= do_shortcode('[rt_reading_time post_id="' . get_the_ID() . '"]'); ?> min read - 
+					<?php mixed_reef_tank_posted_on(); ?>
+					<?php mixed_reef_tank_posted_by() ?>
+
+				</div><!-- .entry-meta -->
+			<?php endif; ?>
 	</header><!-- .entry-header -->
 
 	<?php mixed_reef_tank_post_thumbnail(); ?>
@@ -47,17 +52,6 @@
 				wp_kses_post( get_the_title() )
 			)
 		);
-
-		wp_link_pages(
-			array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'test' ),
-				'after'  => '</div>',
-			)
-		);
 		?>
 	</div><!-- .entry-content -->
-
-	<footer class="entry-footer">
-		<?php mixed_reef_tank_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->
