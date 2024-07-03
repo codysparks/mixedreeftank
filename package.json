@@ -8,6 +8,6 @@
 	"scripts": {
 		"start": "docker-compose up -d",
 		"stop": "docker-compose down",
-		"watch": "sass --watch wp-content/themes/mixed-reef-tank/styles/global.scss:wp-content/themes/mixed-reef-tank/styles/css/global.css wp-content/themes/mixed-reef-tank/styles/front-page.scss:wp-content/themes/mixed-reef-tank/styles/css/front-page.css wp-content/themes/mixed-reef-tank/styles/category-page.scss:wp-content/themes/mixed-reef-tank/styles/css/category-page.css wp-content/themes/mixed-reef-tank/styles/blog-page.scss:wp-content/themes/mixed-reef-tank/styles/css/blog-page.css"
+		"watch": "sass --watch wp-content/themes/mixed-reef-tank/styles/global.scss:wp-content/themes/mixed-reef-tank/styles/css/global.css wp-content/themes/mixed-reef-tank/styles/front-page.scss:wp-content/themes/mixed-reef-tank/styles/css/front-page.css wp-content/themes/mixed-reef-tank/styles/category-page.scss:wp-content/themes/mixed-reef-tank/styles/css/category-page.css wp-content/themes/mixed-reef-tank/styles/blog-page.scss:wp-content/themes/mixed-reef-tank/styles/css/blog-page.css wp-content/themes/mixed-reef-tank/styles/content-page.scss:wp-content/themes/mixed-reef-tank/styles/css/content-page.css"
 	}
 }

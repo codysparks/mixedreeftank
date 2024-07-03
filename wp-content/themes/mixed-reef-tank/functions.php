@@ -153,17 +153,24 @@ function mixed_reef_tank_scripts() {
 	/** Custon styles */
 	wp_enqueue_style('global', get_theme_file_uri('/styles/css/global.css'), array(), filemtime(get_template_directory() .'/styles/css/global.css'));
 
-
+	// Home page
 	if(is_front_page()) {
 		wp_enqueue_style('front_page', get_theme_file_uri('/styles/css/front-page.css'), array(), filemtime(get_template_directory() .'/styles/css/front-page.css'));
 	}
 
+	// Category page
 	if(is_archive()) {
 		wp_enqueue_style('category', get_theme_file_uri('/styles/css/category-page.css'), array(), filemtime(get_template_directory() .'/styles/css/category-page.css'));
 	}
 
+	// Blog post
 	if(is_single()) {
 		wp_enqueue_style('category', get_theme_file_uri('/styles/css/blog-page.css'), array(), filemtime(get_template_directory() .'/styles/css/blog-page.css'));
+	}
+
+	// Content page
+	if(is_page()) {
+		wp_enqueue_style('content', get_theme_file_uri('/styles/css/content-page.css'), array(), filemtime(get_template_directory() .'/styles/css/content-page.css'));
 	}
 }
 add_action( 'wp_enqueue_scripts', 'mixed_reef_tank_scripts' );
