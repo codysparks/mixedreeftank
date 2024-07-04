@@ -17,8 +17,7 @@ get_header();
 				<header class="page-header">
 					<h1 class="page-title">
 						<?php
-						/* translators: %s: search query. */
-						printf( esc_html__( 'Search results for %s', 'mixed-reef-tank' ), '<span>' . get_search_query() . '</span>' );
+							printf( esc_html__( 'Search results for %s', 'mixed-reef-tank' ), '<span>' . get_search_query() . '</span>' );
 						?>
 					</h1>
 				</header><!-- .page-header -->

@@ -3,8 +3,14 @@
 
 .home {
 	section {
-		margin-bottom: 124px;
+		margin-bottom: 128px;
 		position: relative;
+
+		h1 {
+			&:after {
+				content: none;
+			}
+		}
 
 		h2 {
 			text-align: center;

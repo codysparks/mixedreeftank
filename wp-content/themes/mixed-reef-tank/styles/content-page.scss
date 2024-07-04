@@ -17,15 +17,6 @@
 
 				h1 {
 					text-align: center;
-
-					&::after {
-						border-bottom: 5px $orange solid;
-						content: '';
-						display: flex;
-						height: 5px;
-						margin: 32px auto 0;
-						width: 100px;
-					}
 				}
 
 				.entry-meta {
@@ -41,8 +32,6 @@
 			}
 
 			.entry-content {
-				margin-bottom: 128px;
-
 				h1,
 				h2,
 				h3,

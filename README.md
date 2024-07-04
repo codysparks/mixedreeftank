@@ -8,8 +8,6 @@ This repsoitory uses a docker container with WSL2.
 
 ## Content Roundmap
 
-- 404 Page
-
 ### Introduction to Saltwater Aquariums
 
 - Benefits of Owning a Saltwater Aquarium
