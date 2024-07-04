@@ -159,7 +159,7 @@ function mixed_reef_tank_scripts() {
 	}
 
 	// Category page
-	if(is_archive()) {
+	if(is_archive() || is_search()) {
 		wp_enqueue_style('category', get_theme_file_uri('/styles/css/category-page.css'), array(), filemtime(get_template_directory() .'/styles/css/category-page.css'));
 	}
 

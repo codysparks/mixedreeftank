@@ -11,25 +11,24 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
-		<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
-
-		<?php if ( 'post' === get_post_type() ) : ?>
-		<div class="entry-meta">
+		<a href="<?php the_permalink(); ?>">
 			<?php
-			mixed_reef_tank_posted_on();
-			mixed_reef_tank_posted_by();
+			if (has_post_thumbnail()) :
+				the_post_thumbnail();
+			endif;
+
+			// Get the primary category ID set by RankMath
+			$primary_category_id = get_post_meta(get_the_ID(), 'rank_math_primary_category', true);
+			$category_link = get_category_link($primary_category_id);
 			?>
-		</div><!-- .entry-meta -->
-		<?php endif; ?>
+		</a>
+
+		<div class="entry-meta">
+			<h2 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+			<?php if($primary_category_id): ?>
+				<p class="entry-category"><a href="<?= esc_url($category_link); ?>"><?= esc_html(get_category($primary_category_id)->cat_name); ?></a></p>
+			<?php endif; ?>
+			<p class="entry-read-time"><?= do_shortcode('[rt_reading_time post_id="' . get_the_ID() . '"]'); ?> min read</p>
+		</div>
 	</header><!-- .entry-header -->
-
-	<?php mixed_reef_tank_post_thumbnail(); ?>
-
-	<div class="entry-summary">
-		<?php the_excerpt(); ?>
-	</div><!-- .entry-summary -->
-
-	<footer class="entry-footer">
-		<?php mixed_reef_tank_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->
