@@ -140,48 +140,36 @@ get_header();
                 <h2>Categories</h2>
 
                 <div class="category-posts-wrapper">
-                    <div class="category-section">
-                        <a href="/setup">
-                            <img src="http://mixedreeftank.local/wp-content/uploads/2024/01/header.jpg" alt="Setup">
-                            <h3>Setting Up Your Saltwater Aquarium</h3>
-                        </a>
-                    </div>
+                <?php
+                    $categories = get_categories();
+                    if (!empty($categories)) {
+                        foreach ( $categories as $category ) {
+                            $long_title = get_field('long_title', $category);
+                            $category_imge = get_field('homepage_image', $category);
 
-                    <div class="category-section">
-                        <a href="/fish">
-                            <img src="http://mixedreeftank.local/wp-content/uploads/2024/01/header.jpg" alt="Setup">
-                            <h3>Saltwater Fish Care</h3>
-                        </a>
-                    </div>
 
-                    <div class="category-section">
-                        <a href="/coral">
-                            <img src="http://mixedreeftank.local/wp-content/uploads/2024/01/header.jpg" alt="Setup">
-                            <h3>Coral Care</h3>
-                        </a>
-                    </div>
+                            echo '<div class="category-section">';
+                            echo '<a href="' . esc_url( get_category_link( $category->term_id ) ) . '">';
 
-                    <div class="category-section">
-                        <a href="/maintenance">
-                            <img src="http://mixedreeftank.local/wp-content/uploads/2024/01/header.jpg" alt="Setup">
-                            <h3>Saltwater Aquarium Maintenance</h3>
-                        </a>
-                    </div>
+                            if($category_imge) {
+                                echo '<img src="'.$category_imge['url'].'" width="330" height="315" alt="'.$category_imge['alt'].'" alt="Setup">';
+                            }
 
-                    <div class="category-section">
-                        <a href="/chemistry">
-                            <img src="http://mixedreeftank.local/wp-content/uploads/2024/01/header.jpg" alt="Setup">
-                            <h3>Water Chemistry</h3>
-                        </a>
-                    </div>
+                            echo '<h3>';
+                            // Check for alternative title
+                            if($long_title) {
+                                echo esc_html($long_title);
+                            }
+                            else {
+                                echo esc_html($category->name);
+                            }
+                            echo '</h3>';
 
-                    <div class="category-section">
-                        <a href="/equipment">
-                            <img src="http://mixedreeftank.local/wp-content/uploads/2024/01/header.jpg" alt="Setup">
-                            <h3>Aquarium Equipment</h3>
-                        </a>
-                    </div>                            
-                </div>
+                            echo '</a>';
+                            echo '</div>';
+                        }
+                    }
+                ?>
             </section>
         </div>
 	</main><!-- #main -->
