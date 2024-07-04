@@ -8,7 +8,7 @@ This repsoitory uses a docker container with WSL2.
 
 ## Content Roundmap
 
-### Introduction to Saltwater Aquariums
+### Introduction to Saltwater Aquariums [Setup]
 
 - Benefits of Owning a Saltwater Aquarium
 - Differences Between Saltwater and Freshwater Aquariums
@@ -31,7 +31,7 @@ This repsoitory uses a docker container with WSL2.
 - How to Source Your First Fish and Corals
 - Introduction to Aquarium Automation
 
-### Setting Up Your Saltwater Aquarium
+### Setting Up Your Saltwater Aquarium [Setup]
 
 - Choosing the Right Tank
 - Step-by-Step Setup Guide
@@ -54,7 +54,7 @@ This repsoitory uses a docker container with WSL2.
 - Initial Stocking List for Beginners
 - Creating a Safe Environment for New Additions
 
-### Saltwater Fish Species
+### Saltwater Fish Species [Fish]
 
 - Beginner-Friendly Saltwater Fish
 - Rare and Exotic Saltwater Fish
@@ -77,7 +77,7 @@ This repsoitory uses a docker container with WSL2.
 - Hawkfish: Species and Care
 - Surgeonfish: Species and Care
 
-### Coral Care and Maintenance
+### Coral Care and Maintenance [Coral]
 
 - Introduction to Corals
 - Soft Corals: Species and Care
@@ -100,7 +100,7 @@ This repsoitory uses a docker container with WSL2.
 - Importance of Calcium and Alkalinity for Corals
 - Using Coral Supplements
 
-### Aquarium Equipment Essentials
+### Aquarium Equipment Essentials [Equipment]
 
 - Choosing the Right Tank
 - Overview of Filtration Systems
@@ -123,7 +123,7 @@ This repsoitory uses a docker container with WSL2.
 - Maintenance Tools and Accessories
 - Choosing the Right Aquarium Lid
 
-## Water Chemistry and Quality
+## Water Chemistry and Quality [Chemistry]
 
 - Understanding pH Levels in Saltwater Aquariums
 - The Importance of Salinity and Specific Gravity
@@ -146,7 +146,7 @@ This repsoitory uses a docker container with WSL2.
 - Maintaining Optimal Oxygen Levels
 - Using Buffer Solutions for Stability
 
-### Common Saltwater Aquarium Problems
+### Common Saltwater Aquarium Problems [Maintenance]
 
 - Identifying and Treating Ich
 - Addressing Algae Blooms
@@ -169,7 +169,7 @@ This repsoitory uses a docker container with WSL2.
 - Solving Low Oxygen Levels
 - Managing Tank Leaks and Spills
 
-### Saltwater Aquarium Maintenance
+### Saltwater Aquarium Maintenance [Maintenance]
 
 - Daily Maintenance Tasks
 - Weekly Maintenance Checklist
@@ -192,7 +192,7 @@ This repsoitory uses a docker container with WSL2.
 - Monitoring and Adjusting Flow Rates
 - Seasonal Maintenance Considerations
 
-### Feeding Saltwater Fish
+### Feeding Saltwater Fish [Fish]
 
 - Types of Fish Food: Pellets, Flakes, and Frozen
 - Live Foods for Marine Fish
@@ -215,7 +215,7 @@ This repsoitory uses a docker container with WSL2.
 - Proper Storage of Fish Food
 - Feeding During Quarantine
 
-### Advanced Reef Keeping
+### Advanced Reef Keeping [Misc]
 
 - Understanding Reef Ecosystems
 - Setting Up a Large Reef Tank
@@ -238,7 +238,7 @@ This repsoitory uses a docker container with WSL2.
 - Advanced Quarantine Techniques
 - Continuous Improvement and Experimentation
 
-### Aquascaping Techniques
+### Aquascaping Techniques [Setup]
 
 - Introduction to Aquascaping
 - Choosing the Right Substrate
@@ -261,7 +261,7 @@ This repsoitory uses a docker container with WSL2.
 - Creating a Minimalist Aquascape
 - Maintaining and Adjusting Your Aquascape
 
-### Lighting for Saltwater Aquariums
+### Lighting for Saltwater Aquariums [Equipment]
 
 - Understanding Light Spectrums
 - Choosing the Right Lighting System
@@ -284,7 +284,7 @@ This repsoitory uses a docker container with WSL2.
 - Effects of Lighting on Coral Growth
 - Troubleshooting Lighting Issues
 
-### Filtration Systems
+### Filtration Systems [Equipment]
 
 - Introduction to Filtration Systems
 - Mechanical Filtration Basics
@@ -307,7 +307,7 @@ This repsoitory uses a docker container with WSL2.
 - Filtration for Nano Aquariums
 - Advanced Filtration Techniques
 
-### Quarantine Procedures
+### Quarantine Procedures [Fish]
 
 - Importance of Quarantine
 - Setting Up a Quarantine Tank
@@ -330,7 +330,7 @@ This repsoitory uses a docker container with WSL2.
 - Quarantine Best Practices
 - Advanced Quarantine Techniques
 
-### Breeding Saltwater Fish
+### Breeding Saltwater Fish [Fish]
 
 - Introduction to Breeding Saltwater Fish
 - Choosing Breeding Pairs
@@ -353,7 +353,7 @@ This repsoitory uses a docker container with WSL2.
 - Handling Genetic Diversity
 - Troubleshooting Breeding Issues
 
-### Tank Mates and Compatibility
+### Tank Mates and Compatibility [Fish]
 
 - ntroduction to Tank Mate Compatibility
 - Compatible Fish Species for Beginners
@@ -376,7 +376,7 @@ This repsoitory uses a docker container with WSL2.
 - Handling Introductions of New Fish
 - Troubleshooting Compatibility Issues
 
-### DIY Projects for Saltwater Aquariums
+### DIY Projects for Saltwater Aquariums [DIY]
 
 - Building a Custom Sump
 - DIY Aquarium Stand
@@ -399,7 +399,7 @@ This repsoitory uses a docker container with WSL2.
 - DIY Magnetic Algae Scraper
 - DIY Aquarium Cooling System
 
-### Marine Plants and Algae
+### Marine Plants and Algae [Plants]
 
 - Introduction to Marine Plants
 - Benefits of Marine Plants
@@ -422,7 +422,7 @@ This repsoitory uses a docker container with WSL2.
 - Marine Plant Compatibility
 - Using Marine Plants for Breeding
 
-### Sustainable Practices
+### Sustainable Practices [Substainability]
 
 - Introduction to Sustainable Aquarium Keeping
 - Ethical Sourcing of Marine Life

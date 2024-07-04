@@ -147,7 +147,6 @@ get_header();
                             $long_title = get_field('long_title', $category);
                             $category_imge = get_field('homepage_image', $category);
 
-
                             echo '<div class="category-section">';
                             echo '<a href="' . esc_url( get_category_link( $category->term_id ) ) . '">';
 

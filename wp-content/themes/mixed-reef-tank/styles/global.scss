@@ -93,8 +93,21 @@ body {
 		justify-content: space-between;
 
 		.site-logo {
+			align-items: center;
+			display: flex;
+			gap: 16px;
+
 			a {
 				line-height: 0;
+			}
+
+			a.custom-logo-link {
+				transform: scaleX(-1);
+				max-width: 50px;
+
+				&:hover {
+					background-size: 0;
+				}
 			}
 
 			a.site-name {
@@ -312,6 +325,12 @@ footer.site-footer {
 @media only screen and (max-width: $laptop-size) {
 	#masthead .content-wrapper .main-navigation .site-navigation-wrapper ul {
 		gap: 24px;
+	}
+}
+
+@media only screen and (max-width: 970px) {
+	#masthead .content-wrapper .main-navigation .site-navigation-wrapper ul {
+		gap: 12px;
 	}
 }
 
@@ -548,6 +567,26 @@ footer.site-footer {
 			font-size: 14px;
 			margin-bottom: 0;
 			text-align: center;
+		}
+	}
+}
+
+@media only screen and (max-width: 330px) {
+	body {
+		min-width: $mobile-size;
+
+		#masthead .content-wrapper {
+			.site-logo {
+				gap: 8px;
+
+				a.custom-logo-link {
+					max-width: 30px;
+				}
+
+				a.site-name {
+					font-size: 20px;
+				}
+			}
 		}
 	}
 }
