@@ -22,7 +22,7 @@ get_header();
 
 					<?php get_search_form(); ?>
 
-					<p><img src="http://mixedreeftank.local/wp-content/uploads/2024/07/clownfish-sleeping.png" alt="Clownfish Sleeping" /></p>
+					<p><img src="/wp-content/uploads/2024/07/clownfish-sleeping.png" alt="Clownfish Sleeping" /></p>
 
 				</div><!-- .page-content -->
 			</section><!-- .error-404 -->
