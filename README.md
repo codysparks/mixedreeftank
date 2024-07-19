@@ -10,14 +10,14 @@ This repsoitory uses a docker container with WSL2.
 
 ### Introduction to Saltwater Aquariums [Setup]
 
+- Setting Up A Saltwater Aquarium for Beginners
 - Benefits of Owning a Saltwater Aquarium
 - Differences Between Saltwater and Freshwater Aquariums
 - Choosing the Right Tank Size
 - Understanding Saltwater Aquarium Terminology
 - Basic Biology of Marine Life
 - The Nitrogen Cycle in Saltwater Aquariums
-- Choosing the Right Location for Your Aquarium
-- Introduction to Saltwater Aquarium Communities
+- Choosing the Right Location for Your Aquarium-
 - Initial Costs and Budgeting for a Saltwater Aquarium
 - Time Commitment Required for Saltwater Aquariums
 - Beginner Mistakes to Avoid
