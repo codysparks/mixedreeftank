@@ -39,7 +39,8 @@
 				p,
 				ul,
 				ol,
-				blockquote {
+				blockquote,
+				.wp-block-rank-math-toc-block {
 					max-width: 800px;
 					margin: 32px auto;
 				}
@@ -63,13 +64,74 @@
 
 				blockquote {
 					background-color: $light-gray;
-					border-left: 5px $orange solid;
+					border: 5px $orange solid;
+					border-width: 5px 0;
 					font-size: 24px;
 					font-weight: 500;
 					padding: 24px 48px;
+					position: relative;
 
 					p {
 						margin: 0;
+					}
+				}
+
+				.key-takeaways {
+					background-color: $light-blue;
+					margin: 48px 0;
+					padding: 48px 0;
+
+					h2 {
+						line-height: 100%;
+						margin-top: 0;
+					}
+
+					ul {
+						margin-bottom: 0;
+					}
+				}
+
+				.wp-block-table {
+					table {
+						margin-bottom: 32px;
+
+						thead {
+							background: #dbecfb;
+							border-bottom: none;
+
+							th {
+								border: 1px solid #ccc;
+								padding: 16px;
+							}
+						}
+
+						tbody {
+							tr {
+								&:nth-child(even) {
+									background: #f9f9f9;
+								}
+
+								td {
+									border: 1px solid #ccc;
+									padding: 16px;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: $tablet-size) {
+	.single-post {
+		.site-main {
+			article {
+				.entry-content {
+					.key-takeaways {
+						margin: 0 -16px;
+						padding: 32px 16px;
 					}
 				}
 			}

@@ -97,7 +97,5 @@
 		"zip",
 		"zlib",
 		"wordpress"
-	],
-	// this last line is to fix vs code 1.79 prettier issue
-	"prettier.prettierPath": "./node_modules/prettier"
+	]
 }
