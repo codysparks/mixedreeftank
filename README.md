@@ -10,8 +10,8 @@ This repsoitory uses a docker container with WSL2.
 
 ### Introduction to Saltwater Aquariums [Setup]
 
-- Setting Up A Saltwater Aquarium for Beginners
-- Benefits of Owning a Saltwater Aquarium
+- ~~Setting Up A Saltwater Aquarium for Beginners~~
+- ~~Benefits of Owning a Saltwater Aquarium~~
 - Differences Between Saltwater and Freshwater Aquariums
 - Choosing the Right Tank Size
 - Understanding Saltwater Aquarium Terminology
