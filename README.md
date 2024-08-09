@@ -171,9 +171,7 @@ This repsoitory uses a docker container with WSL2.
 
 ### Saltwater Aquarium Maintenance [Maintenance]
 
-- Daily Maintenance Tasks
-- Weekly Maintenance Checklist
-- Monthly Maintenance Routines
+- ~~Saltwater Aquarium Maintenance~~
 - Cleaning Aquarium Glass
 - Maintaining Filtration Systems
 - Water Testing: Regular Schedule

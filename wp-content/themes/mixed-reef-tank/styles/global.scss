@@ -2,6 +2,10 @@
 @import './mixins.scss';
 @import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
 
+html {
+	scroll-behavior: smooth;
+}
+
 body {
 	background: $background;
 	font-family: 'Mulish', sans-serif;
@@ -17,6 +21,7 @@ body {
 	h4,
 	h5 {
 		margin-bottom: 32px;
+		scroll-margin-top: 100px;
 	}
 
 	h1 {
