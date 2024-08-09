@@ -56,7 +56,7 @@ This repsoitory uses a docker container with WSL2.
 
 ### Saltwater Fish Species [Fish]
 
-- Beginner-Friendly Saltwater Fish
+- ~~Beginner-Friendly Saltwater Fish~~
 - Rare and Exotic Saltwater Fish
 - Care Guides for Clownfish
 - Tangs: Species and Care
@@ -79,7 +79,7 @@ This repsoitory uses a docker container with WSL2.
 
 ### Coral Care and Maintenance [Coral]
 
-- Introduction to Corals
+- ~~Introduction to Corals~~
 - Soft Corals: Species and Care
 - LPS Corals: Species and Care
 - SPS Corals: Species and Care
