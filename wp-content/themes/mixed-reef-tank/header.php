@@ -35,19 +35,19 @@
 			<div class="content-wrapper">
 				<div class="site-logo">
 					<a href="<?php echo esc_url(home_url('/')); ?>" class="site-name" rel="home">
-						<img src="/wp-content/themes/mixed-reef-tank/img/mixed-reef-tank-logo-50x50.png" alt="Mixed Reef Tank" />
+						<img src="/wp-content/themes/mixed-reef-tank/img/mixed-reef-tank-logo-50x50.png" alt="Mixed Reef Tank Logo" />
 						<?php bloginfo('name'); ?></a>
 				</div>
 
 				<nav id=" site-navigation" class="main-navigation">
-					<button class="menu-toggle">
+					<button aria-label="Open Mobile Navigation" class="menu-toggle">
 						<span></span>
 						<span></span>
 						<span></span>
 					</button>
 
 					<div class="site-navigation-wrapper">
-						<button class="menu-close">
+						<button aria-label="Close Mobile Navigation" class="menu-close">
 							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="36px" height="36px">
 								<defs>
 									<mask id="mask1">
