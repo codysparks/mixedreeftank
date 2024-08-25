@@ -537,6 +537,8 @@ footer.site-footer {
 	}
 
 	#masthead .content-wrapper {
+		gap: 0;
+
 		.site-logo {
 			a.site-name {
 				font-size: 24px;
@@ -576,9 +578,9 @@ footer.site-footer {
 	}
 }
 
-@media only screen and (max-width: 330px) {
+@media only screen and (max-width: 320px) {
 	body {
-		min-width: $mobile-size;
+		min-width: 320px;
 
 		#masthead .content-wrapper {
 			.site-logo {

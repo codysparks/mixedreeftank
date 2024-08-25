@@ -132,7 +132,7 @@ This repsoitory uses a docker container with WSL2.
 - Understanding Ammonia in Saltwater Aquariums
 - Testing Water Parameters: Methods and Tools
 - Role of Trace Elements in Marine Aquariums
-- Using RO/DI Water for Aquariums
+- ~~Using RO/DI Water for Aquariums~~
 - Water Changes: Frequency and Best Practices
 - Dealing with Phosphate Levels
 - Importance of Calcium and Magnesium
