@@ -10,6 +10,8 @@
  * @package Mixed_Reef_Tank
  */
 
+$package_file = json_decode(file_get_contents('package.json'), true);
+
 ?>
 
 <div id="before_footer"><img src="/wp-content/themes/mixed-reef-tank/img/wave.svg" alt="Footer Design" /></div>
@@ -50,7 +52,8 @@
 		</div>
 
 		<hr>
-		<p class="copyright"><em>Copyright <?= date('Y'); ?> · All rights reserved</em></p>
+		<p class="copyright"><em>Copyright <?= date('Y'); ?> · All rights reserved</em> - v<?= $package_file['version']; ?></p>
+	</div>
 	</div>
 </footer><!-- #colophon -->
 </div><!-- #page -->
