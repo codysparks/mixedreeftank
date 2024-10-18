@@ -1,6 +1,6 @@
 {
 	"name": "mixedreeftank",
-	"version": "1.0.7",
+	"version": "1.0.8",
 	"main": "index.js",
 	"repository": "https://github.com/codysparks/mixedreeftank.git",
 	"author": "Cody Sparks <cosparks@live.com>",
