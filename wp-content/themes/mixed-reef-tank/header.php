@@ -35,7 +35,7 @@
 			<div class="content-wrapper">
 				<div class="site-logo">
 					<a href="<?php echo esc_url(home_url('/')); ?>" class="site-name" rel="home">
-						<img src="/wp-content/themes/mixed-reef-tank/img/mixed-reef-tank-logo-50x50.png" alt="Mixed Reef Tank Logo" />
+						<img src="/wp-content/themes/mixed-reef-tank/img/mixed-reef-tank-logo-180x180.png" height="50" width="50" alt="Mixed Reef Tank Logo" />
 						<?php bloginfo('name'); ?></a>
 				</div>
 

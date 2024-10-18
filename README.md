@@ -13,7 +13,6 @@ This repsoitory uses a docker container with WSL2.
 - ~~Setting Up A Saltwater Aquarium for Beginners~~
 - ~~Benefits of Owning a Saltwater Aquarium~~
 - Differences Between Saltwater and Freshwater Aquariums
-- Choosing the Right Tank Size
 - Understanding Saltwater Aquarium Terminology
 - Basic Biology of Marine Life
 - The Nitrogen Cycle in Saltwater Aquariums
@@ -33,7 +32,6 @@ This repsoitory uses a docker container with WSL2.
 
 ### Setting Up Your Saltwater Aquarium [Setup]
 
-- Choosing the Right Tank
 - Step-by-Step Setup Guide
 - Initial Cycling Process
 - Adding Live Rock
@@ -102,8 +100,7 @@ This repsoitory uses a docker container with WSL2.
 
 ### Aquarium Equipment Essentials [Equipment]
 
-- Choosing the Right Tank
-- Overview of Filtration Systems
+- ~~Overview of Filtration Systems~~
 - Types of Aquarium Heaters
 - Understanding Protein Skimmers
 - Importance of Lighting
@@ -149,7 +146,7 @@ This repsoitory uses a docker container with WSL2.
 ### Common Saltwater Aquarium Problems [Maintenance]
 
 - Identifying and Treating Ich
-- Addressing Algae Blooms
+- Addressing Bacteria Blooms
 - Dealing with Cyanobacteria
 - Recognizing and Treating Velvet Disease
 - Handling Coral Bleaching
